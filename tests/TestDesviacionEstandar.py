@@ -8,3 +8,8 @@ class TestDesviacionEstandar(unittest.TestCase):
         datos = []
         desviacion = DesviacionEstandar(datos)
         self.assertIsNone(desviacion.calcular())
+
+    def test_lista_un_elemento_retorna_cero(self):
+        datos = [5]
+        desviacion = DesviacionEstandar(datos)
+        self.assertEqual(0, desviacion.calcular())
