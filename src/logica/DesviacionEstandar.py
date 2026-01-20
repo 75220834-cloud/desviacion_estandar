@@ -3,4 +3,5 @@ class DesviacionEstandar:
         self.__datos = datos
 
     def calcular(self):
-        return False
+        if len(self.__datos) == 0:
+            return None
