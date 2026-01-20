@@ -11,13 +11,7 @@ class DesviacionEstandar:
         if n == 1:
             return 0
 
-        # media
         media = sum(self.__datos) / n
+        suma = sum((x - media) ** 2 for x in self.__datos)
 
-        # suma de cuadrados
-        suma = 0
-        for x in self.__datos:
-            suma += (x - media) ** 2
-
-        # desviación estándar poblacional
         return (suma / n) ** 0.5
